@@ -9,13 +9,13 @@ function currenter(input) {
         curNumber *= 10;
     }
     curNumber += input;
-    //inputElement.innerHTML =  curNumber.toString();
-    inputElement.innerHTML = curNumber.toString();
+    //inputElement.textContent =  curNumber.toString();
+    inputElement.textContent = curNumber.toString();
 }
 ;
 function operator(act) {
     act();
-    inputElement.innerHTML = firstNumber.toString() + ' ' + Action;
+    inputElement.textContent = firstNumber.toString() + ' ' + Action;
 }
 function addition() {
     firstNumber = curNumber;
@@ -54,7 +54,7 @@ function calculation() {
     else if (Action == "/") {
         res = firstNumber / curNumber;
     }
-    inputElement.innerHTML = res.toString();
+    inputElement.textContent = res.toString();
     Action = String();
     curNumber = res;
     firstNumber = 0;
@@ -63,6 +63,6 @@ function calculation() {
 function clearCalc() {
     curNumber = 0;
     firstNumber = 0;
-    inputElement.innerHTML = curNumber.toString();
+    inputElement.textContent = curNumber.toString();
 }
 ;
